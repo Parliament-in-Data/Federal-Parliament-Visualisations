@@ -107,10 +107,6 @@ a:link:not(:hover) {
   transition: opacity 0.15s ease-out;
 }
 
-#content {
-  width: 60vw;
-}
-
 @media screen and (min-width: 30em) {
   .pv4-ns {
     padding-top: 2rem;
