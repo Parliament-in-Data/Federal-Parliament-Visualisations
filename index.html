@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<html>
+
+<head>
+    <title>Ons Parlement in Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <script type="module">
+        import notebook from "https://api.observablehq.com/@laurensdeb/hoe-is-het-gesteld-met-ons-federale-parlement.js?collection=@laurensdeb/belgisch-federaal-parlement&session=55&v=3";
+        window._datavis_notebook = notebook;
+    </script>
+    <script type="module" src="datavis_main.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css" />
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans:wght@700&family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400&display=swap" rel="stylesheet"> </head>
+
+<body>
+    <header class="bg-black-90 fixed w-100 ph3 pv3 pv4-ns ph4-m ph5-l nav">
+        <nav class="f6 fw6 tracked">
+            <a class="link dim white dib mr3 classic" href="/"><i>Ons Parlement in <u>Data</u></i></a>
+            <div id="link-container"></div>
+        </nav>
+    </header>
+    <div class="spacer"></div>
+    <a name="top"></a>
+    <article id="content" class="center f5 pv5 lh-copy ph1">
+    </article>
+    <footer class="pv4 ph3 ph5-m ph6-l mid-gray">
+        <small class="f6 db tc"><b>Bronnen: </b> DeKamer.be, Wikipedia, Wikimedia Commons</small>
+        <small class="f6 db tc">De data gebruikt op deze website is vrij beschikbaar onder de <b><a
+                    href="https://choosealicense.com/licenses/mit/" class="ttu">MIT license</a></b></small>
+        <div class="tc mt3">
+            <a href="https://www.dekamer.be" title="Language" class="f6 dib ph2 link mid-gray dim">Website van de Kamer
+                van Volksvertegenwoordigers</a>
+            <a href="https://parlement.thundr.be" title="Terms" class="f6 dib ph2 link mid-gray dim">API</a>
+            <a href="https://github.com/laurensdeb/Federal-Parliament-Scraper" title="Privacy"
+                class="f6 dib ph2 link mid-gray dim">Github</a>
+        </div>
+    </footer>
+</body>
+</html>
