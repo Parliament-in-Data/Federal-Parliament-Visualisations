@@ -30,6 +30,8 @@ main.redefine("index_url", 'index.html');
 main.redefine("party_url", 'party.html');
 main.redefine("member_url", "member.html");
 main.redefine("meeting_url", "meeting.html");
+main.redefine("search_url", "search.html");
+
 
 function resizeHandler(_e) {
     function pxToNr(px) {
