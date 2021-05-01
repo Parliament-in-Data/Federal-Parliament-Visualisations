@@ -26,11 +26,11 @@ const main = runtime.module(notebook, name => {
 });
 
 // Note: no leading / to be able to host on subdir
-main.redefine("index_url", 'index.html');
-main.redefine("party_url", 'party.html');
-main.redefine("member_url", "member.html");
-main.redefine("meeting_url", "meeting.html");
-main.redefine("search_url", "search.html");
+main.redefine("index_url", `${window.location.origin}/index.html`);
+main.redefine("party_url", `${window.location.origin}/party.html`);
+main.redefine("member_url", `${window.location.origin}/member.html`);
+main.redefine("meeting_url", `${window.location.origin}/meeting.html`);
+main.redefine("search_url", `${window.location.origin}/search.html`);
 
 
 function resizeHandler(_e) {
