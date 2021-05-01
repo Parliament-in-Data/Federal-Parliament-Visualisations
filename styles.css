@@ -186,7 +186,6 @@ input[type="search"] {
   border-radius: 3px;
   border: 1px solid #aaa;
   background: #eee;
-  width: 400px !important;
   height: 45px;
   padding: .5em .8em .5em .8em;
   outline: none;
