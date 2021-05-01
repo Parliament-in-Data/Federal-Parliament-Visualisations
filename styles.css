@@ -2,6 +2,10 @@ body {
   font-family: sans-serif;
 }
 
+.br3 {
+  border-radius: 3px !important;
+}
+
 a {
   color: #3182bd;
 }
