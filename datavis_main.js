@@ -32,6 +32,10 @@ main.redefine("member_url", `${window.location.origin}/member`);
 main.redefine("meeting_url", `${window.location.origin}/meeting`);
 main.redefine("search_url", `${window.location.origin}/search`);
 
+if(window.location.origin === "https://parlement-in-data-dev.thundr.be"){
+    main.redefine("API_BASE", "https://parlement-dev.thundr.be");
+}
+
 
 function resizeHandler(_e) {
     function pxToNr(px) {
