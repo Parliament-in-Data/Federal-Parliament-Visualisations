@@ -36,7 +36,6 @@ if(window.location.origin === "https://parlement-in-data-dev.thundr.be"){
     main.redefine("API_BASE", "https://parlement-dev.thundr.be");
 }
 
-
 function resizeHandler(_e) {
     function pxToNr(px) {
         return +px.slice(0, -2);
