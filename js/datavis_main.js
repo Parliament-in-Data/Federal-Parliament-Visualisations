@@ -8,31 +8,33 @@ const notebook = window._datavis_notebook;
 const runtime = new Runtime();
 
 const main = runtime.module(notebook, name => {
-    if(name === 'links') {
-        return {fulfilled(links) {
-            const container = document.getElementById('link-container');
-            container.innerHTML = '';
-            for(const link of links) {
-                const a = document.createElement('a');
-                a.className = "link dim white dib mr3 ttu";
-                a.innerText = link.title;
-                a.href = link.href;
-                //a.title = link.title; // Useless?
-                container.appendChild(a);
+    if (name === 'links') {
+        return {
+            fulfilled(links) {
+                const container = document.getElementById('link-container');
+                container.innerHTML = '';
+                for (const link of links) {
+                    const a = document.createElement('a');
+                    a.className = "link dim white dib mr3 ttu";
+                    a.innerText = link.title;
+                    a.href = link.href;
+                    container.appendChild(a);
+                }
             }
-        }};
+        };
     }
     return Inspector.into(document.getElementById("content"))();
 });
 
-// Note: no leading / to be able to host on subdir
+// Redefine the navitation URIs
 main.redefine("index_url", `${window.location.origin}/`);
-main.redefine("party_url", `${window.location.origin}/party`);
-main.redefine("member_url", `${window.location.origin}/member`);
-main.redefine("meeting_url", `${window.location.origin}/meeting`);
-main.redefine("search_url", `${window.location.origin}/search`);
+main.redefine("party_url", `${window.location.origin}/party.html`);
+main.redefine("member_url", `${window.location.origin}/member.html`);
+main.redefine("meeting_url", `${window.location.origin}/meeting.html`);
+main.redefine("search_url", `${window.location.origin}/search.html`);
 
-if(window.location.origin === "https://parlement-in-data-dev.thundr.be"){
+// This code enables the development API environment
+if (window.location.origin === "https://parlement-in-data-dev.thundr.be") {
     main.redefine("API_BASE", "https://parlement-dev.thundr.be");
 }
 
